@@ -1,19 +1,9 @@
-spring:
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
+spring:  
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/payments?zeroDateTimeBehavior=convertToNull
-      username: root
-      password: password
-
-server:
-  port: 8080
-  servlet:
-    context-path: '/payments'
----
+    url: jdbc:h2:mem:postgres;DB_CLOSE_DELAY=-1   
+    

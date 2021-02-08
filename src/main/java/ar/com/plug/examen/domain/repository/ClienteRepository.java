@@ -32,44 +32,6 @@ public interface ClienteRepository extends JpaRepository<Cliente, String>{
 	@Query(value = "SELECT * FROM CLIENTE ", nativeQuery = true)
 	List<Cliente> findAll();
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	@Autowired
-	private JdbcTemplate jdbcTemplates;
-	
-	private final static Logger logger = LoggerFactory.getLogger(ClienteRepository.class);
-	
-	
-	private static final String SQL_LISTAR_CLIENTES = "SELECT * FROM cliente";
-	
 
-
-	public List<ClienteVO> listarClientes() {
-		logger.info("Ingreso a: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		try {
-			return jdbcTemplates.query(
-					SQL_LISTAR_CLIENTES, new Object[] { },
-					 (rs, rowNum)  -> {		
-						 ClienteVO listaClientes = new ClienteVO();
-							listaClientes.setIdCliente(rs.getLong("id"));
-							listaClientes.setNombreCliente(rs.getString("nombre"));
-							listaClientes.setApellidoCliente(rs.getString("apellido"));
-							return listaClientes;
-					});
-		}catch(Exception e){
-			logger.error("Exception (" + Thread.currentThread().getStackTrace()[1].getMethodName() + ") :" + " causa: "
-					+ e.getCause() + " mensaje: " + e.getMessage());
-			return null;
-		}
-	
-		
-	}*/
 
 }

@@ -41,27 +41,4 @@ public interface VendedorRepository extends JpaRepository<Vendedor, String> {
 	List<Vendedor> findAll();
 	
 
-/*
-	public List<VendedorVO> listarVendedor() {
-		logger.info("Ingreso a: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-		try {
-			return jdbcTemplates.query(
-					SQL_LISTAR_VENDEDORES, new Object[] { },
-					 (rs, rowNum)  -> {		
-						 VendedorVO listaVendedores = new VendedorVO();
-							 listaVendedores.setIdVendedor(rs.getLong("id"));
-							 listaVendedores.setNombreVendedor(rs.getString("nombre"));
-							 listaVendedores.setApellidoVendedor(rs.getString("apellido"));
-							return listaVendedores;
-					});
-		}catch(Exception e){
-			logger.error("Exception (" + Thread.currentThread().getStackTrace()[1].getMethodName() + ") :" + " causa: "
-					+ e.getCause() + " mensaje: " + e.getMessage());
-			return null;
-		}
-	
-		
-	}*/
-
-
 }
